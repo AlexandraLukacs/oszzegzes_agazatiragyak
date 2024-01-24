@@ -15,6 +15,8 @@ for i in range(0, len(cipo_lista), 1):
     meret = cipo_lista[i].meret
     print(f"{nev}: ({meret})")
 
+#Összegzés tétel
+# Egy sorozathoz egy értéket rendel
 def meret_atlag():
     ossz: int= 0
     for i in range(0, len(cipo_lista), 1):
@@ -23,6 +25,45 @@ def meret_atlag():
 
 meret_atlag()
 
+
+#Maximum kiválasztás tétel
+# Egy sorozathoz egy értéket rendel
+def legnagyobb():
+    #legnagyobb méretet nézi
+    print("Milyen márkájú a legnagyobb méretű cipő: ", end="")
+    max: int= 0
+    for i in range(1, len(cipo_lista), 1):
+        if cipo_lista[i].meret > max:
+            max = cipo_lista[i].meret
+    print(f"{cipo_lista[i].nev}")
+
+def legnagyobb2():
+    #legnagyobb helyet nézi
+    print("Milyen márkájú a legnagyobb méretű cipő: ", end="")
+    max: int= 0
+    for i in range(1, len(cipo_lista), 1):
+        if cipo_lista[i].meret > cipo_lista[max].meret:
+            max = i
+    print(f"{cipo_lista[i].nev}")
+
+legnagyobb()
+legnagyobb2()
+
+#Megszámlálás
+#Hány db adidas cipőnk van?
+def db_adidas():
+    print("Hány db adidas cipőnk van: ", end="")
+    db: int= 0
+    for i in range(0, len(cipo_lista), 1):
+        if cipo_lista[i].nev == "Adidas":
+            db += 1
+    print(f"{db} db")
+
+db_adidas()
+
+    
+
+#Eldöntés tétel
 def nagyobb42adidas():
     print("Van-e 42-esnél nagyobb Adidas: ", end="")
     van = False
