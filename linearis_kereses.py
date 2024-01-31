@@ -6,7 +6,7 @@ def lin_ker():
         i += 1
     van = i <= felso
     if van:
-        print("van 0-ra végződő szám: " + i)
+        print("van 0-ra végződő szám: " + str(i))
     else:
         print("nincs 0-ra végződő szám")
 
